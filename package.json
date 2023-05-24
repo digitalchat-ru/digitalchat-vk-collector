@@ -1,0 +1,27 @@
+{
+  "name": "digitalchat-vk-collector",
+  "version": "0.1.0",
+  "description": "Collect messages from vk and send to webhook",
+  "private": true,
+  "repository": "git@github.com:MailfTrue/digitalchat-vk-collector.git",
+  "author": "Denis Ilyin",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.4.3",
+    "typescript": "^5.0.4",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
+  },
+  "dependencies": {
+    "@vk-io/authorization": "^1.4.1",
+    "buffer": "^6.0.3",
+    "dotenv": "^16.0.3",
+    "got": "^12.6.0",
+    "node-dependency-injection": "^3.0.5",
+    "vk-io": "^4.8.3",
+    "winston": "^3.8.2"
+  }
+}
