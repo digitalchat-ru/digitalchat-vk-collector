@@ -1,0 +1,8 @@
+{
+  "name": "VK Collector",
+  "out": "./docs",
+  "entryPoints": ["./src/entities", "./src/enums"],
+  "entryPointStrategy": "expand",
+  "theme": "default",
+  "plugin": ["typedoc-plugin-markdown", "typedoc-github-wiki-theme"]
+}
