@@ -1,31 +1,52 @@
-import * as dotenv from 'dotenv'
-import * as winston from "winston";
+require(`dotenv-defaults`).config();
+
+import logger from "./logger";
+import { CallbackService } from "vk-io";
+import ProcessingService from "./services/ProcessingService";
+import ProcessingCacheService from "./services/ProcessingCacheService";
 import VkService from "./services/VkService";
 import VkAuthService from "./services/VkAuthService";
-import {CallbackService} from "vk-io";
-dotenv.config()
+import RedisService from "./services/RedisService";
 
 async function main() {
-    const logger = winston.createLogger()
-    const baseContext = {
-        logger
-    }
+  const vkCredentials = {
+    login: process.env.VK_LOGIN,
+    password: process.env.VK_PASSWORD,
+  };
 
-    const vkAuthService = new VkAuthService({
-        ...baseContext,
-        vkCredentials: {
-            login: process.env.VK_LOGIN,
-            password: process.env.VK_PASSWORD,
-        },
-        callbackService: new CallbackService()
-    })
-    const {token: vkToken} = await vkAuthService.run()
+  const redisService = new RedisService({
+    logger,
+    redisUrl: process.env.REDIS_URL,
+    globalPrefix: `vk-collector/${vkCredentials.login}`,
+  });
+  await redisService.connect();
 
-    const vkService = new VkService({
-        ...baseContext,
-        vkToken,
-    })
-    await vkService.run()
+  const vkAuthService = new VkAuthService({
+    logger,
+    redisService,
+    vkCredentials,
+    callbackService: new CallbackService(),
+  });
+
+  const vkService = new VkService({
+    logger,
+    vkAuthService,
+  });
+
+  const processingService = new ProcessingService({
+    logger,
+    redisService,
+    vkService,
+    webhookUrl: process.env.WEBHOOK_URL,
+    webhookApiToken: process.env.WEBHOOK_API_TOKEN,
+    processingCacheService: new ProcessingCacheService({
+      logger,
+      redisService: redisService,
+    }),
+  });
+
+  logger.info("Start polling");
+  await vkService.startPolling();
 }
 
-main().catch(console.error)
+main().catch(console.error);

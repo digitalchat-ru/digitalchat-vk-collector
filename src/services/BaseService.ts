@@ -1,19 +1,30 @@
-import {Logger} from "winston";
+import { Logger } from "winston";
+import { EventEmitter } from "node:events";
 
 export class AbstractService<_T> {
-    constructor(props: _T) {}
-
+  constructor(props: _T) {}
 }
 
 export interface BaseServiceProps {
-    logger: Logger;
+  logger: Logger;
 }
 
-export default class BaseService extends AbstractService<BaseServiceProps> {
-    logger: Logger;
+class BaseService<
+  Events extends Record<string, (...args: any[]) => void> = {}
+> extends AbstractService<BaseServiceProps> {
+  logger: Logger;
+  emitter: EventEmitter;
 
-    constructor(props) {
-        super(props)
-        this.logger = props.logger
-    }
+  on<U extends keyof Events>(event: U, listener: Events[U]): this {
+    this.emitter.on(event.toString(), listener);
+    return this;
+  }
+
+  constructor(props) {
+    super(props);
+    this.logger = props.logger;
+    this.emitter = new EventEmitter();
+  }
 }
+
+export default BaseService;
