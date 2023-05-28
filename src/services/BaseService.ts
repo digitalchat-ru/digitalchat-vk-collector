@@ -20,6 +20,11 @@ class BaseService<
     return this;
   }
 
+  emit<U extends keyof Events>(event: U, listener: Events[U]): this {
+    this.emitter.emit(event.toString(), listener);
+    return this;
+  }
+
   constructor(props) {
     super(props);
     this.logger = props.logger;

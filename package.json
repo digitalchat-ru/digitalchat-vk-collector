@@ -3,24 +3,25 @@
   "version": "0.1.0",
   "description": "Collect messages from vk and send to webhook",
   "private": true,
+  "homepage": "https://github.com/MailfTrue/digitalchat-vk-collector",
   "repository": "git@github.com:MailfTrue/digitalchat-vk-collector.git",
   "author": "Denis Ilyin",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node src/index.ts",
+    "build": "tsc",
     "start": "ts-node --transpile-only  src/index.ts",
     "docs": "typedoc"
   },
   "devDependencies": {
-    "@knodes/typedoc-plugin-pages": "^0.23.4",
+    "@types/node": "^20.2.5",
     "nodemon": "^2.0.22",
     "ts-loader": "^9.4.3",
-    "typedoc": "0.24.7",
+    "typedoc": "^0.24.7",
     "typedoc-github-wiki-theme": "^1.1.0",
     "typedoc-plugin-markdown": "^3.15.3",
-    "typescript": "^5.0.4",
-    "webpack": "^5.83.1",
-    "webpack-cli": "^5.1.1"
+    "typedoc-wikijs-theme": "^1.0.5",
+    "typescript": "^5.0.4"
   },
   "dependencies": {
     "@vk-io/authorization": "^1.4.1",
@@ -30,9 +31,6 @@
     "dotenv-defaults": "^5.0.2",
     "got": "^12.6.0",
     "mitt": "^3.0.0",
-    "nanoevents": "^7.0.1",
-    "node-dependency-injection": "^3.0.5",
-    "node-polyfill-webpack-plugin": "^2.0.1",
     "redis": "^4.6.6",
     "vk-io": "^4.8.3",
     "winston": "^3.8.2"

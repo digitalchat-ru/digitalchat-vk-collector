@@ -1,30 +1,35 @@
-const path = require('path');
-const webpack = require("webpack")
+const path = require("path");
+const webpack = require("webpack");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
-    entry: './src/index.ts',
-    plugins: [
-        new webpack.ProgressPlugin(),
+  mode: "development",
+  target: "node",
+  entry: "./src/index.ts",
+  plugins: [new webpack.ProgressPlugin(), new NodePolyfillPlugin()],
+  module: {
+    rules: [
+      {
+        test: /\.node$/,
+        use: "node-loader",
+      },
+      {
+        test: /\.ts?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
     ],
-    module: {
-        rules: [
-            {
-                test: /\.ts?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/,
-            },
-        ],
-    },
-    resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
-    },
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
-    devServer: {
-        static: path.join(__dirname, "dist"),
-        compress: true,
-        port: 4000,
-    },
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
+  },
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
+  },
+  devServer: {
+    static: path.join(__dirname, "dist"),
+    compress: true,
+    port: 4000,
+  },
 };

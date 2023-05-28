@@ -12,7 +12,7 @@ import { WebhookTypeEnum } from "../enums/WebhookTypeEnum";
 import { VkServiceEventTypeEnum } from "../enums/VkServiceEventTypeEnum";
 
 export interface ProcessingServiceProps extends BaseServiceProps {
-  webhookUrl: string;
+  webhookUrl?: string;
   webhookApiToken: string;
   vkService: VkService;
   redisService: RedisService;
@@ -20,7 +20,7 @@ export interface ProcessingServiceProps extends BaseServiceProps {
 }
 
 class ProcessingService extends BaseService {
-  webhookUrl: string;
+  webhookUrl?: string;
   webhookApiToken: string;
   vkService: VkService;
   redisService: RedisService;
@@ -38,7 +38,7 @@ class ProcessingService extends BaseService {
       this.processNewMessage(message);
     });
 
-    this.vkService.emitter.on(
+    this.vkService.on(
       VkServiceEventTypeEnum.ACCOUNT_PROFILE_INFO,
       (profile) => {
         this.sendWebhook({
@@ -97,9 +97,13 @@ class ProcessingService extends BaseService {
   async sendWebhook(webhook: WebhookData) {
     let webhookSent: boolean;
     try {
-      await axios.post(this.webhookUrl, webhook, {
-        headers: { Authorization: `Bearer ${this.webhookApiToken}` },
-      });
+      this.logger.debug("Send webhook");
+      this.logger.debug(webhook);
+      if (this.webhookUrl) {
+        await axios.post(this.webhookUrl, webhook, {
+          headers: { Authorization: `Bearer ${this.webhookApiToken}` },
+        });
+      }
       webhookSent = true;
     } catch (err) {
       if (axios.isAxiosError(err)) {

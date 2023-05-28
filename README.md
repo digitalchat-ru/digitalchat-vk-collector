@@ -1,9 +1,6 @@
 # VK Collector
 
-## Description
+## _Description_
+This app collect all incoming messages from VK and send http requests
 
-This app collect all messages from VK and send webhooks
-
-## [Configuration](./docs-source/Configuration.md)
-
-## [Deploy](./docs-source/Development.md)
+## [_Docs_](./docs/pages/Index.md)

@@ -1,9 +1,0 @@
-`.env`
-|Key|Description|
-|-|-|
-|VK_LOGIN||
-|VK_PASSWORD||
-|WEBHOOK_URL||
-|WEBHOOK_API_TOKEN||
-|LOG_LEVEL||
-|REDIS_URL||
