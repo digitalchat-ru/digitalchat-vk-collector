@@ -18,7 +18,7 @@
 
 #### Defined in
 
-entities/ShortChatInfo.ts:4
+[entities/ShortChatInfo.ts:4](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/ShortChatInfo.ts#L4)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-entities/ShortChatInfo.ts:3
+[entities/ShortChatInfo.ts:3](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/ShortChatInfo.ts#L3)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-entities/ShortChatInfo.ts:2
+[entities/ShortChatInfo.ts:2](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/ShortChatInfo.ts#L2)

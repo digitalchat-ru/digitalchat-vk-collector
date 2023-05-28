@@ -17,7 +17,7 @@
 
 #### Defined in
 
-entities/NewVkMessage.ts:3
+[entities/NewVkMessage.ts:3](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/NewVkMessage.ts#L3)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-entities/NewVkMessage.ts:2
+[entities/NewVkMessage.ts:2](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/NewVkMessage.ts#L2)

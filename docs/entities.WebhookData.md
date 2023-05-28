@@ -28,7 +28,7 @@
 
 #### Defined in
 
-entities/WebhookData.ts:17
+[entities/WebhookData.ts:17](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/WebhookData.ts#L17)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-entities/WebhookData.ts:6
+[entities/WebhookData.ts:6](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/WebhookData.ts#L6)

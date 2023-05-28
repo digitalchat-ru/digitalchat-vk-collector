@@ -20,7 +20,7 @@
 
 #### Defined in
 
-entities/VkUser.ts:8
+[entities/VkUser.ts:8](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/VkUser.ts#L8)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-entities/VkUser.ts:5
+[entities/VkUser.ts:5](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/VkUser.ts#L5)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-entities/VkUser.ts:4
+[entities/VkUser.ts:4](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/VkUser.ts#L4)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-entities/VkUser.ts:6
+[entities/VkUser.ts:6](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/VkUser.ts#L6)
 
 ___
 
@@ -60,4 +60,4 @@ ___
 
 #### Defined in
 
-entities/VkUser.ts:7
+[entities/VkUser.ts:7](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/VkUser.ts#L7)

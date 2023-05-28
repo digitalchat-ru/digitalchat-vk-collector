@@ -18,7 +18,7 @@
 
 #### Defined in
 
-enums/SexEnum.ts:4
+[enums/SexEnum.ts:4](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/enums/SexEnum.ts#L4)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-enums/SexEnum.ts:3
+[enums/SexEnum.ts:3](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/enums/SexEnum.ts#L3)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-enums/SexEnum.ts:2
+[enums/SexEnum.ts:2](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/enums/SexEnum.ts#L2)

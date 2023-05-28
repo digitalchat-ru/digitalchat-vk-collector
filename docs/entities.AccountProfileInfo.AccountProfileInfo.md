@@ -17,7 +17,7 @@
 
 #### Defined in
 
-entities/AccountProfileInfo.ts:2
+[entities/AccountProfileInfo.ts:2](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/AccountProfileInfo.ts#L2)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-entities/AccountProfileInfo.ts:3
+[entities/AccountProfileInfo.ts:3](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/AccountProfileInfo.ts#L3)

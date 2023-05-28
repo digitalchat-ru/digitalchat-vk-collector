@@ -17,7 +17,7 @@
 
 #### Defined in
 
-enums/VkServiceEventTypeEnum.ts:3
+[enums/VkServiceEventTypeEnum.ts:3](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/enums/VkServiceEventTypeEnum.ts#L3)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-enums/VkServiceEventTypeEnum.ts:2
+[enums/VkServiceEventTypeEnum.ts:2](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/enums/VkServiceEventTypeEnum.ts#L2)

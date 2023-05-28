@@ -21,7 +21,7 @@
 
 #### Defined in
 
-entities/NewVkMessage.ts:12
+[entities/NewVkMessage.ts:12](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/NewVkMessage.ts#L12)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-entities/NewVkMessage.ts:10
+[entities/NewVkMessage.ts:10](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/NewVkMessage.ts#L10)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-entities/NewVkMessage.ts:7
+[entities/NewVkMessage.ts:7](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/NewVkMessage.ts#L7)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-entities/NewVkMessage.ts:11
+[entities/NewVkMessage.ts:11](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/NewVkMessage.ts#L11)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-entities/NewVkMessage.ts:9
+[entities/NewVkMessage.ts:9](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/NewVkMessage.ts#L9)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-entities/NewVkMessage.ts:8
+[entities/NewVkMessage.ts:8](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/entities/NewVkMessage.ts#L8)

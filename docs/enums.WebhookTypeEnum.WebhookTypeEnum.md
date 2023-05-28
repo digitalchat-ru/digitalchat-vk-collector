@@ -17,7 +17,7 @@
 
 #### Defined in
 
-enums/WebhookTypeEnum.ts:2
+[enums/WebhookTypeEnum.ts:2](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/enums/WebhookTypeEnum.ts#L2)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-enums/WebhookTypeEnum.ts:3
+[enums/WebhookTypeEnum.ts:3](https://github.com/digitalchat-ru/digitalchat-vk-collector/blob/7600e40/src/enums/WebhookTypeEnum.ts#L3)
