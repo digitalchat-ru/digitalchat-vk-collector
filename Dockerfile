@@ -11,4 +11,4 @@ FROM gcr.io/distroless/nodejs:18
 WORKDIR /usr/app
 COPY --from=builder /usr/app .
 USER 1000
-CMD ["index.js"]
+CMD ["./build/index.js"]
