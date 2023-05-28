@@ -6,8 +6,7 @@ VK Collector / [Exports](modules.md)
 This app collect all incoming messages from VK and send http requests
 
 ## _Design_
-### Definitions
-|               |                        |
+| Definitions   |                        |
 | ------------- | ---------------------- |
 | Entity, Enums | Business logic units   |
 | Service       | Business logic service |
@@ -29,6 +28,6 @@ This app collect all incoming messages from VK and send http requests
 3. `VkService.startPolling()` start watching updates
 4. `ProcessingService` will send webhooks
 
-## [_Configuration_](../pages/Configuration.md)
+## [_Configuration_](./pages/Configuration.md)
 
-## [_Development_](../pages/Development.md)
+## [_Development_](./pages/Development.md)

@@ -2,25 +2,26 @@ import { Updates, VK } from "vk-io";
 import { MessageContext } from "vk-io/lib/structures";
 import { NewVkMessage } from "../entities/NewVkMessage";
 import { VkUser } from "../entities/VkUser";
-import BaseService, { BaseServiceProps } from "./BaseService";
+import { BaseService } from "./BaseService";
 
 import { AccountProfileInfo } from "../entities/AccountProfileInfo";
 import { ShortChatInfo } from "../entities/ShortChatInfo";
 import { VkServiceEventTypeEnum } from "../enums/VkServiceEventTypeEnum";
-import type VkAuthService from "./VkAuthService";
+import { BaseServiceProps } from "./BaseService";
+import type { VkAuthService } from "./VkAuthService";
 
 export interface VkServiceProps extends BaseServiceProps {
   vkAuthService: VkAuthService;
 }
 
-type VkServiceEvents = {
+export type VkServiceEvents = {
   [VkServiceEventTypeEnum.NEW_MESSAGE]: (message: NewVkMessage) => void;
   [VkServiceEventTypeEnum.ACCOUNT_PROFILE_INFO]: (
     profileInfo: AccountProfileInfo
   ) => void;
 };
 
-class VkService extends BaseService<VkServiceEvents> {
+export class VkService extends BaseService<VkServiceEvents> {
   vk: VK;
   vkAuthService: VkAuthService;
 
@@ -102,5 +103,3 @@ class VkService extends BaseService<VkServiceEvents> {
     return vkUser;
   }
 }
-
-export default VkService;

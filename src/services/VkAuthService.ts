@@ -3,11 +3,10 @@ import {
   officialAppCredentials,
 } from "@vk-io/authorization";
 import { CallbackService } from "vk-io";
-import type { BaseServiceProps } from "./BaseService";
-import BaseService from "./BaseService";
-import RedisService from "./RedisService";
+import { BaseService, BaseServiceProps } from "./BaseService";
+import type { RedisService } from "./RedisService";
 
-type VkCredentials = { login: string; password: string };
+export type VkCredentials = { login: string; password: string };
 
 export interface VkAuthServiceProps extends BaseServiceProps {
   vkCredentials: VkCredentials;
@@ -17,7 +16,7 @@ export interface VkAuthServiceProps extends BaseServiceProps {
 
 const TOKEN_CACHE_KEY = "token";
 
-export default class VkAuthService extends BaseService {
+export class VkAuthService extends BaseService {
   requestPromise: DirectAuthorization;
   redisService: RedisService;
   vkCredentials: VkCredentials;

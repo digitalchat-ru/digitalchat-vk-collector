@@ -2,11 +2,7 @@ require(`dotenv-defaults`).config();
 
 import logger from "./logger";
 import { CallbackService } from "vk-io";
-import ProcessingService from "./services/ProcessingService";
-import ProcessingCacheService from "./services/ProcessingCacheService";
-import VkService from "./services/VkService";
-import VkAuthService from "./services/VkAuthService";
-import RedisService from "./services/RedisService";
+import * as services from "./services";
 
 async function main() {
   const vkCredentials = {
@@ -14,32 +10,32 @@ async function main() {
     password: process.env.VK_PASSWORD,
   };
 
-  const redisService = new RedisService({
+  const redisService = new services.RedisService({
     logger,
     redisUrl: process.env.REDIS_URL,
     globalPrefix: `vk-collector/${vkCredentials.login}`,
   });
   await redisService.connect();
 
-  const vkAuthService = new VkAuthService({
+  const vkAuthService = new services.VkAuthService({
     logger,
     redisService,
     vkCredentials,
     callbackService: new CallbackService(),
   });
 
-  const vkService = new VkService({
+  const vkService = new services.VkService({
     logger,
     vkAuthService,
   });
 
-  const processingService = new ProcessingService({
+  const processingService = new services.ProcessingService({
     logger,
     redisService,
     vkService,
     webhookUrl: process.env.WEBHOOK_URL,
     webhookApiToken: process.env.WEBHOOK_API_TOKEN,
-    processingCacheService: new ProcessingCacheService({
+    processingCacheService: new services.ProcessingCacheService({
       logger,
       redisService: redisService,
     }),

@@ -1,15 +1,15 @@
 import axios from "axios";
 import debugAxiosResponse from "../utils/debugAxiosResponse";
-import BaseService from "./BaseService";
-import ProcessingCacheService from "./ProcessingCacheService";
-import VkService from "./VkService";
+import { BaseService } from "./BaseService";
+import { ProcessingCacheService } from "./ProcessingCacheService";
+import { VkService } from "./VkService";
 
 import type { NewVkMessage } from "../entities/NewVkMessage";
 import type { WebhookData } from "../entities/WebhookData";
-import type { BaseServiceProps } from "./BaseService";
-import type RedisService from "./RedisService";
-import { WebhookTypeEnum } from "../enums/WebhookTypeEnum";
 import { VkServiceEventTypeEnum } from "../enums/VkServiceEventTypeEnum";
+import { WebhookTypeEnum } from "../enums/WebhookTypeEnum";
+import type { BaseServiceProps } from "./BaseService";
+import { RedisService } from "./RedisService";
 
 export interface ProcessingServiceProps extends BaseServiceProps {
   webhookUrl?: string;
@@ -19,7 +19,7 @@ export interface ProcessingServiceProps extends BaseServiceProps {
   processingCacheService: ProcessingCacheService;
 }
 
-class ProcessingService extends BaseService {
+export class ProcessingService extends BaseService {
   webhookUrl?: string;
   webhookApiToken: string;
   vkService: VkService;
@@ -115,5 +115,3 @@ class ProcessingService extends BaseService {
     return webhookSent;
   }
 }
-
-export default ProcessingService;

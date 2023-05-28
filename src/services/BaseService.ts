@@ -9,7 +9,7 @@ export interface BaseServiceProps {
   logger: Logger;
 }
 
-class BaseService<
+export class BaseService<
   Events extends Record<string, (...args: any[]) => void> = {}
 > extends AbstractService<BaseServiceProps> {
   logger: Logger;
@@ -31,5 +31,3 @@ class BaseService<
     this.emitter = new EventEmitter();
   }
 }
-
-export default BaseService;

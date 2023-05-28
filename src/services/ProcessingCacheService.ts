@@ -1,7 +1,7 @@
 import { ShortChatInfo } from "../entities/ShortChatInfo";
 import { VkUser } from "../entities/VkUser";
-import BaseService, { BaseServiceProps } from "./BaseService";
-import RedisService from "./RedisService";
+import { BaseService, BaseServiceProps } from "./BaseService";
+import { RedisService } from "./RedisService";
 
 const USERS_CACHE_KEY = "processing/users";
 const USERS_CACHE_EX = 60 * 60;
@@ -13,7 +13,7 @@ export interface ProcessingCacheServiceProps extends BaseServiceProps {
   redisService: RedisService;
 }
 
-class ProcessingCacheService extends BaseService {
+export class ProcessingCacheService extends BaseService {
   redisService: RedisService;
 
   constructor(props: ProcessingCacheServiceProps) {
@@ -63,5 +63,3 @@ class ProcessingCacheService extends BaseService {
     );
   }
 }
-
-export default ProcessingCacheService;
