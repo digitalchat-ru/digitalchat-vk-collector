@@ -1,6 +1,6 @@
 {
   "name": "VK Collector",
-  "out": "./docs/generated",
+  "out": "./wiki/generated",
   "entryPoints": ["./src/entities/index.ts", "./src/enums/index.ts", "./src/services/index.ts"],
   "plugin": ["typedoc-plugin-markdown", "typedoc-github-wiki-theme"],
   "readme": "./docs/Index.md"
