@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  redis:
+    image: redis:7.0.11
+    container_name: redis
+
+  vk_collector:
+    image: ghcr.io/digitalchat-ru/vk-collector
+    container_name: vk_collector
+    build: ./
+    depends_on:
+      - redis
+    env_file: .env
