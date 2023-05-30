@@ -3,3 +3,4 @@ build
 docs
 wiki
 .env.local
+.env
