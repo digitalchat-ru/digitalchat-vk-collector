@@ -106,8 +106,10 @@ export class ProcessingService extends BaseService {
       }
       webhookSent = true;
     } catch (err) {
-      if (axios.isAxiosError(err)) {
+      if (axios.isAxiosError(err) && err.response) {
         debugAxiosResponse(this.logger, err.response);
+      } else {
+        this.logger.error(err);
       }
       webhookSent = false;
     }
