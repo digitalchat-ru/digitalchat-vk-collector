@@ -46,7 +46,7 @@ async function main() {
     redisService,
     vkService,
     webhookUrl: process.env.WEBHOOK_URL,
-    webhookApiToken: process.env.WEBHOOK_API_TOKEN,
+    webhookApiToken: process.env.API_TOKEN,
     processingCacheService: new services.ProcessingCacheService({
       logger,
       redisService: redisService,
